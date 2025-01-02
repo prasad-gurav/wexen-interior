@@ -55,11 +55,11 @@ function OurWork() {
 			className="p-2 m-2 flex flex-col items-center justify-center gap-4 py-16 max-w-screen-2xl mx-auto "
 			initial="hidden"
 			whileInView="visible"
-			viewport={{ once: true, amount: 0.1 }}
+			viewport={{ once: false, amount: 0.1 }}
 			variants={containerVariants}
 		>
 			<motion.h4
-				className="text-black font-titan text-5xl font-light mb-12 text-center"
+				className="text-black font-titan text-5xl font-light mb-12 text-center max-xl:text-4xl"
 				initial={{ opacity: 0, y: -50 }}
 				animate={{ opacity: 1, y: 0 }}
 				transition={{ duration: 0.8, ease: "easeOut" }}
@@ -92,7 +92,16 @@ function OurWork() {
 								alt={work.alt}
 							/>
 						</div>
-
+						<motion.div
+							className="hidden max-xl:flex absolute inset-0 bg-black bg-opacity-50  items-center justify-center rounded-md"
+							initial="visible"
+							whileHover="visible"
+							variants={hoverVariants}
+						>
+							<p className="text-white text-center font-alfa font-light text-4xl px-4">
+								{work.alt}
+							</p>
+						</motion.div>
 						<motion.div
 							className="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center rounded-md"
 							initial="hidden"

@@ -4,7 +4,8 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 
 const NavBar = () => {
-	const [scrolled, setScrolled] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+	const [menuOpen, setMenuOpen] = useState(false);
 
 	useEffect(() => {
 		const handleScroll = () => {
@@ -37,10 +38,12 @@ const NavBar = () => {
 			}}
 			transition={{ duration: 0.5 }}
 		>
-			<div className="flex items-center justify-between container px-4  mx-auto ">
+			<div className="flex items-center justify-between container px-4 mx-auto ">
 				<div className="text-2xl font-bold">WEXEN</div>
+
+				{/* Normal Desktop Menu */}
 				<div>
-					<ul className="flex items-center justify-center gap-8 px-8">
+					<ul className="flex items-center justify-center gap-8 px-8 max-md:hidden">
 						{["Services", "About Us", "Contact Us"].map((item, index) => (
 							<motion.li
 								key={index}
@@ -69,7 +72,39 @@ const NavBar = () => {
 						))}
 					</ul>
 				</div>
+
+				{/* Mobile Menu Button */}
+				<motion.div
+					className="md:hidden flex items-center justify-center p-2 bg-yellow-500 rounded-full relative z-50"
+					onClick={() => setMenuOpen(!menuOpen)}
+					animate={{ rotate: menuOpen ? 180 : 0 }}
+					transition={{ duration: 0.3 }}
+				>
+					<div className="w-6 h-6 bg-black"></div>
+				</motion.div>
 			</div>
+
+			{/* Mobile Slide In Menu */}
+			<motion.div
+				className="fixed top-0 right-0 h-full w-64 bg-gray-900 p-8 z-40 flex flex-col items-start justify-center "
+				initial={{ x: "100%" }}
+				animate={{ x: menuOpen ? 0 : "100%" }}
+				transition={{ type: "spring", stiffness: 300 }}
+			>
+				{["Services", "About Us", "Contact Us"].map((item, index) => (
+					<motion.div
+						key={index}
+						className="text-white py-3 text-xl"
+						initial={{ opacity: 0 }}
+						animate={{ opacity: menuOpen ? 1 : 0 }}
+						transition={{ delay: index * 0.2, duration: 0.3 }}
+					>
+						<Link href={`/${item.toLowerCase().replace(" ", "-")}`}>
+							{item}
+						</Link>
+					</motion.div>
+				))}
+			</motion.div>
 		</motion.nav>
 	);
 };

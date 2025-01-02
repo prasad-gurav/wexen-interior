@@ -27,24 +27,24 @@ const WhatWeOffer = () => {
 	};
 
 	return (
-		<div className="w-[90%] h-screen flex justify-center items-center flex-col px-4 gap-12 mx-auto container ">
-			<div className="flex flex-col gap-y-12">
-				<div className="w-full ">
+		<div className=" max-xl:w-full flex justify-center items-center flex-col px-4 gap-12 mx-auto container  min-h-[100vh]">
+			<div className="flex flex-col gap-y-4 my-8">
+				<div className="w-full max-xl:sticky top-16 max-xl:pt-4 z-10 bg-white">
 					<motion.h4
-						className=" font-titan text-6xl text-black font- mb-12 text-center flex flex-col"
+						className=" font-titan text-6xl text-black font- mb-12 max-xl:mb-0 text-center flex flex-col max-xl:text-4xl"
 						initial={{ opacity: 0, y: -50 }}
 						animate={{ opacity: 1, y: 0 }}
 						viewport={{ once: false, amount: 0.5 }}
 						transition={{ duration: 0.8, ease: "easeOut" }}
 					>
 						What We Offer to Our Clients
-						<motion.span className="text-lg py-4 text-gray-400  font-poppins font-light">
+						<motion.span className="text-lg py-4 text-gray-400  font-poppins font-light ">
 							Who are in extremely love with eco friendly system.
 						</motion.span>
 					</motion.h4>
 				</div>
 				<motion.div
-					className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
+					className="flex flex-wrap items-center justify-center gap-4"
 					variants={containerVariants}
 					initial="hidden"
 					whileInView="visible"
@@ -69,7 +69,7 @@ const WhatWeOffer = () => {
 					].map((card, index) => (
 						<motion.div
 							key={index}
-							className="w-[28rem] relative aspect-video px-32 py-32 cursor-pointer mx-auto border-2 rounded-lg text-center border-slate-900 border-solid   bg-white hover:bg-gray-50 shadow-md overflow-hidden"
+							className="w-[28rem] max-xl:max-w-80 relative aspect-video px-32 py-32 cursor-pointer mx-auto border-2 rounded-lg text-center border-slate-900 border-solid   bg-white hover:bg-gray-50 shadow-md overflow-hidden"
 							variants={cardVariants}
 							style={{
 								backgroundImage: `url(/assets/cover-${index + 1}.jpg)`,

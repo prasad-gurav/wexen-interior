@@ -79,12 +79,12 @@ function Features() {
 				animate={{ opacity: 1, y: 0 }}
 				transition={{ duration: 1, ease: "easeIn", delay: 0.4 }}
 			>
-				<h4 className="text-6xl font-poppins text-white font-bold">
+				<h4 className="text-6xl font-poppins text-white font-bold max-xl:text-4xl">
 					Some Features that Made us Unique
 				</h4>
 			</motion.div>
 			<motion.div
-				className="flex flex-wrap justify-center gap-6 px-4 w-[70%] mx-auto"
+				className="flex flex-wrap justify-center gap-6 px-4 w-[70%] max-xl:w-96 mx-auto"
 				initial="hidden"
 				animate="visible"
 				variants={containerVariants}
