@@ -51,63 +51,63 @@ function OurWork() {
   ];
 
   return (
-    <motion.div
-      className="p-2 m-2 max-w-screen-2xl mx-auto h-screen"
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, amount: 0.1 }}
-      variants={containerVariants}
-    >
-      <motion.h4
-        className="text-black font-titan text-5xl font-light mb-12 text-center"
-        initial={{ opacity: 0, y: -50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
-      >
-        Our Recent Works May Impress You
-      </motion.h4>
-      <motion.div
-        className="flex w-[80%] mx-auto gap-8 justify-center flex-wrap"
-        variants={containerVariants}
-      >
-        {works.map((work, index) => (
-          <motion.div
-            key={index}
-            className="relative group cursor-pointer"
-            whileHover={{ scale: 1.05 }}
-            transition={{ duration: 0.3 }}
-            variants={itemVariants}
-          >
-            <div
-              className="vignette-effect rounded-md overflow-hidden max-h-[350px] max-w-[830px]"
-              style={{
-                boxShadow: "0 0 200px rgba(0,0,0,0.9) inset",
-              }}
-            >
-              <Image
-                className="w-auto h-96 object-fill"
-                width={1000}
-                height={1000}
-                src={work.src}
-                alt={work.alt}
-              />
-            </div>
+		<motion.div
+			className="p-2 m-2 flex flex-col items-center justify-center gap-4 py-16 max-w-screen-2xl mx-auto "
+			initial="hidden"
+			whileInView="visible"
+			viewport={{ once: true, amount: 0.1 }}
+			variants={containerVariants}
+		>
+			<motion.h4
+				className="text-black font-titan text-5xl font-light mb-12 text-center"
+				initial={{ opacity: 0, y: -50 }}
+				animate={{ opacity: 1, y: 0 }}
+				transition={{ duration: 0.8, ease: "easeOut" }}
+			>
+				Our Recent Works May Impress You
+			</motion.h4>
+			<motion.div
+				className="flex w-[80%]  mx-auto gap-8 justify-center flex-wrap"
+				variants={containerVariants}
+			>
+				{works.map((work, index) => (
+					<motion.div
+						key={index}
+						className="relative group cursor-pointer"
+						whileHover={{ scale: 1.05 }}
+						transition={{ duration: 0.3 }}
+						variants={itemVariants}
+					>
+						<div
+							className="vignette-effect rounded-md overflow-hidden max-h-[350px] max-w-[830px]"
+							style={{
+								boxShadow: "0 0 200px rgba(0,0,0,0.9) inset",
+							}}
+						>
+							<Image
+								className="w-auto h-96 object-cover"
+								width={1000}
+								height={1000}
+								src={work.src}
+								alt={work.alt}
+							/>
+						</div>
 
-            <motion.div
-              className="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center rounded-md"
-              initial="hidden"
-              whileHover="visible"
-              variants={hoverVariants}
-            >
-              <p className="text-white text-center font-alfa font-light text-4xl px-4">
-                {work.alt}
-              </p>
-            </motion.div>
-          </motion.div>
-        ))}
-      </motion.div>
-    </motion.div>
-  );
+						<motion.div
+							className="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center rounded-md"
+							initial="hidden"
+							whileHover="visible"
+							variants={hoverVariants}
+						>
+							<p className="text-white text-center font-alfa font-light text-4xl px-4">
+								{work.alt}
+							</p>
+						</motion.div>
+					</motion.div>
+				))}
+			</motion.div>
+		</motion.div>
+	);
 }
 
 export default OurWork;

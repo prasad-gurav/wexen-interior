@@ -27,7 +27,7 @@ const WhatWeOffer = () => {
 	};
 
 	return (
-		<div className="w-[90%] min-h-screen flex justify-center items-center flex-col px-4 gap-12 mx-auto container">
+		<div className="w-[90%] h-screen flex justify-center items-center flex-col px-4 gap-12 mx-auto container ">
 			<div className="flex flex-col gap-y-12">
 				<div className="w-full ">
 					<motion.h4
