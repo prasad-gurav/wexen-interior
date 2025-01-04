@@ -59,7 +59,7 @@ function OurWork() {
 			variants={containerVariants}
 		>
 			<motion.h4
-				className="text-black font-titan text-5xl font-light mb-12 text-center max-xl:text-4xl"
+				className="text-black font-poppins font-semibold text-5xl  mb-12 text-center max-xl:text-4xl"
 				initial={{ opacity: 0, y: -50 }}
 				animate={{ opacity: 1, y: 0 }}
 				transition={{ duration: 0.8, ease: "easeOut" }}
@@ -98,7 +98,7 @@ function OurWork() {
 							whileHover="visible"
 							variants={hoverVariants}
 						>
-							<p className="text-white text-center font-alfa font-light text-4xl px-4">
+							<p className="text-white text-center font-poppins font-bold text-4xl px-4">
 								{work.alt}
 							</p>
 						</motion.div>

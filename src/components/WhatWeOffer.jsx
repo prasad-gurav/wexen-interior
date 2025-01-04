@@ -1,10 +1,25 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useLayoutEffect, useRef } from "react";
 import { color, motion } from "framer-motion";
-
+import TextReveal from "@/components/MaskText";
+import Image from "next/image";
+import LocomotiveScroll from "locomotive-scroll";
+import "locomotive-scroll/dist/locomotive-scroll.css";
 const WhatWeOffer = () => {
 	const [hovering, setHovering] = useState(null);
-	// Animation variants for the cards
+	const containerRef = useRef(null);
+	useLayoutEffect(() => {
+		const scroll = new LocomotiveScroll({
+			el: containerRef.current,
+			smooth: true,
+			multiplier: 1, // Adjust scroll speed
+		});
+
+		// Clean up on component unmount
+		return () => {
+			scroll.destroy();
+		};
+	}, []);
 	const cardVariants = {
 		hidden: { opacity: 0, y: 50 },
 		visible: {
@@ -28,10 +43,25 @@ const WhatWeOffer = () => {
 
 	return (
 		<div className=" max-xl:w-full flex justify-center items-center flex-col px-4 gap-12 mx-auto container  min-h-[100vh]">
+			<div
+				className="relative flex max-md:flex-col w-full items-center justify-center gap-8  max-md:gap-0"
+				ref={containerRef}
+			>
+				<TextReveal />
+				<Image
+					data-scroll
+					data-scroll-speed={0.1}
+					src="/assets/bg-cover-2.jpg"
+					alt="wexen-interior"
+					width={600}
+					height={600}
+					className="aspect-square w-[600px] h-auto object-contain rounded-lg"
+				/>
+			</div>
 			<div className="flex flex-col gap-y-4 my-8">
-				<div className="w-full max-xl:sticky top-16 max-xl:pt-4 z-10 bg-white">
+				<div className="w-full  max-xl:pt-4 z-10 bg-white">
 					<motion.h4
-						className=" font-titan text-6xl text-black font- mb-12 max-xl:mb-0 text-center flex flex-col max-xl:text-4xl"
+						className=" font-poppins font-semibold text-6xl text-black font- mb-12 max-xl:mb-0 text-center flex flex-col max-xl:text-4xl"
 						initial={{ opacity: 0, y: -50 }}
 						animate={{ opacity: 1, y: 0 }}
 						viewport={{ once: false, amount: 0.5 }}
@@ -69,7 +99,7 @@ const WhatWeOffer = () => {
 					].map((card, index) => (
 						<motion.div
 							key={index}
-							className="w-[28rem] max-xl:max-w-80 relative aspect-video px-32 py-32 cursor-pointer mx-auto border-2 rounded-lg text-center border-slate-900 border-solid   bg-white hover:bg-gray-50 shadow-md overflow-hidden"
+							className="w-[28rem] max-xl:max-w-80 relative aspect-video px-32 py-32 cursor-pointer mx-auto border-2 rounded-lg text-center  border-solid   bg-white hover:bg-gray-50 shadow-md overflow-hidden"
 							variants={cardVariants}
 							style={{
 								backgroundImage: `url(/assets/cover-${index + 1}.jpg)`,
@@ -93,7 +123,7 @@ const WhatWeOffer = () => {
 								}}
 								transition={{ duration: 0.6, ease: "easeInOut" }}
 							>
-								<motion.h5 className="text-2xl mb-4 capitalize font-titan font-light bg-white w-full text-black">
+								<motion.h5 className="text-2xl mb-4 capitalize font-poppins  font-light bg-white w-full text-black">
 									{card.title}
 								</motion.h5>
 								<motion.p
