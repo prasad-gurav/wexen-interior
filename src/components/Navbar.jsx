@@ -2,11 +2,13 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { usePathname, useRouter } from "next/navigation";
 
 const NavBar = () => {
-  const [scrolled, setScrolled] = useState(false);
+	const [scrolled, setScrolled] = useState(false);
 	const [menuOpen, setMenuOpen] = useState(false);
-
+	const router = useRouter();
+	const pathname = usePathname();
 	useEffect(() => {
 		const handleScroll = () => {
 			const scrollPosition = window.scrollY;
@@ -25,6 +27,7 @@ const NavBar = () => {
 			window.removeEventListener("scroll", handleScroll);
 		};
 	}, []);
+	const isHomePage = pathname === "/";
 
 	return (
 		<motion.nav
@@ -39,7 +42,14 @@ const NavBar = () => {
 			transition={{ duration: 0.5 }}
 		>
 			<div className="flex items-center justify-between container px-4 mx-auto ">
-				<div className="text-2xl font-bold">WEXEN</div>
+				<Link
+					href={"/"}
+					className={`text-2xl ${
+						isHomePage ? "text-white" : "text-black"
+					} font-bold`}
+				>
+					WEXEN
+				</Link>
 
 				{/* Normal Desktop Menu */}
 				<div>
@@ -52,7 +62,9 @@ const NavBar = () => {
 							>
 								<Link href={`/${item.toLowerCase().replace(" ", "-")}`}>
 									<motion.div
-										className="text-white cursor-pointer"
+										className={`${
+											isHomePage ? "text-white" : "text-black"
+										}  cursor-pointer font-poppins font-light`}
 										initial={{ opacity: 1 }}
 										whileHover={{ opacity: 0.8 }}
 										transition={{ duration: 0.3 }}

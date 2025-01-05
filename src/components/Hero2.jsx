@@ -21,7 +21,7 @@ function Hero2() {
 	}, []);
 	return (
 		<div
-			className="relative flex max-md:flex-col w-full items-center justify-center gap-8  max-md:gap-0"
+			className="relative flex max-md:flex-col w-full items-center justify-center gap-8 px-2  max-md:gap-0"
 			ref={containerRef}
 		>
 			<TextReveal />

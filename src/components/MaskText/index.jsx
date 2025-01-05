@@ -17,7 +17,7 @@ export default function Home() {
 	);
 }
 
-export function MaskText() {
+export function MaskText({ Text }) {
 	const body = useRef(null);
 
 	const isInView = useInView(body, { once: false, margin: "-10%" });
@@ -34,10 +34,11 @@ export function MaskText() {
 			},
 		}),
 	};
+	const textArray = Text || phrases;
 
 	return (
 		<div ref={body} className={styles.body}>
-			{phrases.map((phrase, index) => {
+			{textArray.map((phrase, index) => {
 				return (
 					<div key={index} className={styles.lineMask}>
 						<motion.p
