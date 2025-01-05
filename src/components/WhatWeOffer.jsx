@@ -1,25 +1,12 @@
 "use client";
 import React, { useState, useLayoutEffect, useRef } from "react";
 import { color, motion } from "framer-motion";
-import TextReveal from "@/components/MaskText";
-import Image from "next/image";
-import LocomotiveScroll from "locomotive-scroll";
-import "locomotive-scroll/dist/locomotive-scroll.css";
+
+
+
 const WhatWeOffer = () => {
 	const [hovering, setHovering] = useState(null);
-	const containerRef = useRef(null);
-	useLayoutEffect(() => {
-		const scroll = new LocomotiveScroll({
-			el: containerRef.current,
-			smooth: true,
-			multiplier: 1, // Adjust scroll speed
-		});
 
-		// Clean up on component unmount
-		return () => {
-			scroll.destroy();
-		};
-	}, []);
 	const cardVariants = {
 		hidden: { opacity: 0, y: 50 },
 		visible: {
@@ -42,22 +29,7 @@ const WhatWeOffer = () => {
 	};
 
 	return (
-		<div className=" max-xl:w-full flex justify-center items-center flex-col px-4 gap-12 mx-auto container  min-h-[100vh]">
-			<div
-				className="relative flex max-md:flex-col w-full items-center justify-center gap-8  max-md:gap-0"
-				ref={containerRef}
-			>
-				<TextReveal />
-				<Image
-					data-scroll
-					data-scroll-speed={0.1}
-					src="/assets/bg-cover-2.jpg"
-					alt="wexen-interior"
-					width={600}
-					height={600}
-					className="aspect-square w-[600px] h-auto object-contain rounded-lg"
-				/>
-			</div>
+		<div className=" max-xl:w-full flex justify-center items-center flex-col px-4 gap-12 mx-auto container min-h-[100vh]">
 			<div className="flex flex-col gap-y-4 my-8">
 				<div className="w-full  max-xl:pt-4 z-10 bg-white">
 					<motion.h4

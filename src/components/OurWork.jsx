@@ -28,29 +28,31 @@ function OurWork() {
   };
 
   const works = [
-    {
-      src: "/assets/Barista_store/barista.jpg",
-      alt: "Barista Store",
-      description: "A cozy barista store offering the finest coffee experience.",
-    },
-    {
-      src: "/assets/Tha_belgian_waffle_cafe/01.jpg",
-      alt: "Belgian Waffle Cafe",
-      description: "Delight in the finest Belgian waffles and warm ambiance.",
-    },
-    {
-      src: "/assets/gioia.jpeg",
-      alt: "Gioia",
-      description: "Modern and elegant interior for a memorable dining experience.",
-    },
-    {
-      src: "/assets/HANSIK_DABANG_CAFE/01.jpg",
-      alt: "Hansik Dabang Cafe",
-      description: "A fusion of Korean tradition and contemporary design.",
-    },
-  ];
+		{
+			src: "/assets/Barista_store/barista.jpg",
+			alt: "Barista Store",
+			description:
+				"A cozy barista store offering the finest coffee experience.",
+		},
+		{
+			src: "/assets/Tha_belgian_waffle_cafe/01.jpg",
+			alt: "Belgian Waffle Cafe",
+			description: "Delight in the finest Belgian waffles and warm ambiance.",
+		},
+		{
+			src: "/assets/gioia.jpeg",
+			alt: "Gioia",
+			description:
+				"Modern and elegant interior for a memorable dining experience.",
+		},
+		{
+			src: "/assets/Tescom_wireless_india/01.jpg",
+			alt: "Tescom wireless india",
+			description: "A fusion of Korean tradition and contemporary design.",
+		},
+	];
 
-  return (
+	return (
 		<motion.div
 			className="p-2 m-2 flex flex-col items-center justify-center gap-4 py-16 max-w-screen-2xl mx-auto "
 			initial="hidden"
@@ -98,7 +100,7 @@ function OurWork() {
 							whileHover="visible"
 							variants={hoverVariants}
 						>
-							<p className="text-white text-center font-poppins font-bold text-4xl px-4">
+							<p className="text-white text-center font-poppins font-semibold text-4xl px-4">
 								{work.alt}
 							</p>
 						</motion.div>
@@ -108,7 +110,7 @@ function OurWork() {
 							whileHover="visible"
 							variants={hoverVariants}
 						>
-							<p className="text-white text-center font-alfa font-light text-4xl px-4">
+							<p className="text-white text-center font-poppins font-bold text-4xl px-4">
 								{work.alt}
 							</p>
 						</motion.div>

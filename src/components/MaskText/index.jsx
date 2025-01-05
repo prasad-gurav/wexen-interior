@@ -5,9 +5,8 @@ import { useRef } from "react";
 import Image from "next/image";
 const phrases = [
 	"Elevate your business environment",
-	"with designs that enhance",
-	"productivity, creativity",
-	"and brand identity.",
+	"with designs that enhance productivity,  ",
+	"creativity and brand identity.",
 ];
 
 export default function Home() {
