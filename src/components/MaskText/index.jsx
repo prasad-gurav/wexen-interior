@@ -17,7 +17,7 @@ export default function Home() {
 	);
 }
 
-export function MaskText({ Text }) {
+export function MaskText({ Text, customStyle }) {
 	const body = useRef(null);
 
 	const isInView = useInView(body, { once: false, margin: "-10%" });
@@ -46,6 +46,7 @@ export function MaskText({ Text }) {
 							variants={animation}
 							initial="initial"
 							animate={isInView ? "enter" : ""}
+							style={customStyle}
 						>
 							{phrase}
 						</motion.p>

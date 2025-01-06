@@ -109,8 +109,7 @@ export default function Home() {
 							/>
 							{isMobile && (
 								<div
-									className="rounded-lg
-                py-4"
+									className="rounded-lg py-4"
 									// style={{ backgroundColor: project.color }}
 									key={`modal_${index}`}
 								>

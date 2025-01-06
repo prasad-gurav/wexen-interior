@@ -33,15 +33,11 @@ const NavBar = () => {
 		<motion.nav
 			className="absolute w-full z-50 flex mx-auto p-4 justify-between items-center transition-colors duration-500 "
 			style={{
-				// backgroundColor: scrolled ? "#0f172a" : "transparent",
 				color: "#fff",
-			}}
-			animate={{
-				backgroundColor: scrolled ? "#0f172a" : "rgba(0, 0, 0, 0)",
 			}}
 			transition={{ duration: 0.5 }}
 		>
-			<div className="flex items-center justify-between container px-4 mx-auto ">
+			<div className="flex items-center justify-between container px-4 max-lg: py-8 mx-auto ">
 				<Link
 					href={"/"}
 					className={`text-2xl ${
@@ -53,8 +49,8 @@ const NavBar = () => {
 
 				{/* Normal Desktop Menu */}
 				<div>
-					<ul className="flex items-center justify-center gap-8 px-8 max-md:hidden">
-						{["Services", "About Us", "Contact Us"].map((item, index) => (
+					<ul className="flex items-center justify-center gap-8 px-8 max-lg:hidden">
+						{["Work", "About Us", "Contact Us"].map((item, index) => (
 							<motion.li
 								key={index}
 								className="relative list-none"

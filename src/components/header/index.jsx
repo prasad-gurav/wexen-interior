@@ -4,11 +4,12 @@ import { useEffect, useState } from "react";
 import Nav from "./nav";
 import { AnimatePresence, motion, useScroll, useSpring } from "framer-motion";
 import { usePathname } from "next/navigation";
+import { useMediaQuery } from "react-responsive";
 
 export default function Home() {
 	const [isActive, setIsActive] = useState(false);
 	const pathname = usePathname();
-
+	const isMobile = useMediaQuery({ query: "(max-width: 1024px)" });
 	const { scrollY } = useScroll();
 	const scaleValue = useSpring(scrollY, { stiffness: 400, damping: 40 });
 
@@ -20,11 +21,16 @@ export default function Home() {
 	const [scaleState, setScaleState] = useState("closed");
 
 	useEffect(() => {
+		console.log(isMobile);
 		return scaleValue.onChange((latest) => {
-			if (latest > window.innerHeight * 0.6) {
+			if (isMobile) {
 				setScaleState("open");
 			} else {
-				setScaleState("closed");
+				if (latest > window.innerHeight * 0.6) {
+					setScaleState("open");
+				} else {
+					setScaleState("closed");
+				}
 			}
 		});
 	}, [scaleValue]);
