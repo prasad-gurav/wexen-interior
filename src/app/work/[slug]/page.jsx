@@ -77,7 +77,7 @@ const ourWorks = [
 ];
 
 async function Page({ params }) {
-	const { slug } = params;
+	const { slug } = await params;
 
 	const work = ourWorks.find((work) => work.slug === slug);
 
