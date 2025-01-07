@@ -20,12 +20,11 @@ export default function Home() {
 	const [scaleState, setScaleState] = useState("closed");
 
 	useEffect(() => {
-		console.log(isMobile);
 		return scaleValue.onChange((latest) => {
 			if (isMobile) {
 				setScaleState("open");
 			} else {
-				if (latest > window.innerHeight * 0.6) {
+				if (latest > window.innerHeight * isMobile ? 0.2 : 0.6) {
 					setScaleState("open");
 				} else {
 					setScaleState("closed");

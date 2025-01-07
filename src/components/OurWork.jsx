@@ -63,11 +63,23 @@ function OurWork() {
 			description: "A fusion of Korean tradition and contemporary design.",
 			slug: "Tescom_wireless_india",
 		},
+		{
+			src: "/assets/hansik-dabang-cafe/02.jpeg",
+			alt: "Hansik dabang cafe",
+			description: "A fusion of Korean tradition and contemporary design.",
+			slug: "hansik-dabang-cafe",
+		},
+
+		{
+			alt: "Boba Tree Store",
+			src: "/assets/Boba-tree-store/01.jpeg",
+			slug: "boba-tree-store",
+		},
 	];
 
 	return (
 		<motion.div
-			className="p-2 m-2 flex flex-col items-center justify-center gap-4 py-16 max-w-screen-2xl mx-auto "
+			className="p-4 px-52 max-md:px-2 m-2 flex flex-col items-center justify-center gap-4 py-16 max-w-screen-2xl mx-auto "
 			initial="hidden"
 			whileInView="visible"
 			viewport={{ once: false, amount: 0.1 }}
@@ -82,20 +94,19 @@ function OurWork() {
 				Our Recent Works May Impress You
 			</motion.h4>
 			<motion.div
-				className="flex w-[80%]  mx-auto gap-8 justify-center flex-wrap"
+				className="flex w-[100%] py-8 mx-auto gap-10 justify-center flex-wrap "
 				variants={containerVariants}
 			>
 				{works.map((work, index) => (
-					<Link href={`/work/${work.slug}`}>
+					<Link href={`/work/${work.slug}`} key={index}>
 						<motion.div
-							key={index}
 							className="relative group cursor-pointer"
 							whileHover={{ scale: 1.05 }}
 							transition={{ duration: 0.3 }}
 							variants={itemVariants}
 						>
 							<div
-								className="vignette-effect rounded-md overflow-hidden max-h-[350px] max-w-[830px]"
+								className="vignette-effect rounded-md overflow-hidden max-h-[450px] max-w-[800px]"
 								style={{
 									boxShadow: "0 0 200px rgba(0,0,0,0.9) inset",
 								}}

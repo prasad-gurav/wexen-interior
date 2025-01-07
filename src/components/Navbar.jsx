@@ -47,7 +47,6 @@ const NavBar = () => {
 					WEXEN
 				</Link>
 
-				{/* Normal Desktop Menu */}
 				<div>
 					<ul className="flex items-center justify-center gap-8 px-8 max-lg:hidden">
 						{["Work", "About Us", "Contact Us"].map((item, index) => (

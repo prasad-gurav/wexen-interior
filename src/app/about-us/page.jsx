@@ -6,15 +6,16 @@ import { useMediaQuery } from "react-responsive";
 
 const directors = [
 	{
-		name: "Shubham Kathoke",
-		image: "/assets/ourTeam/ShubhamKathoke.jpeg", // Replace with actual image paths
-	},
-	{
-		name: "Mohd Mosin",
+		name: "Mr.Mohd Mohsin",
 		image: "/assets/ourTeam/MohdMosin.jpeg", // Replace with actual image paths
 	},
 	{
-		name: "Mohd Sharik",
+		name: "Mr.Shubham Kathoke",
+		image: "/assets/ourTeam/ShubhamKathoke.jpeg", // Replace with actual image paths
+	},
+
+	{
+		name: "Mr.Mohd Sharik",
 		image: "/assets/ourTeam/MohdSharik.jpeg", // Replace with actual image paths
 	},
 ];
@@ -69,7 +70,7 @@ export default function AboutUs() {
 								visible: { opacity: 1, y: 0 },
 							}}
 						>
-							<div>
+							<div className="relative">
 								<div
 									className={styles.directorImage}
 									style={{
@@ -79,28 +80,32 @@ export default function AboutUs() {
 										borderRadius: "50%",
 									}}
 								/>
-								<p className="text-xl max-xl:py-8 py-16">Managing Directors</p>
+								<p className="absolute left-[50%] translate-x-[-50%] text-xl max-xl:py-8 py-8">
+									Managing Directors
+								</p>
 							</div>
 
-							{isMobile ? (
-								<MaskText
-									Text={director.name.split(" ")}
-									customStyle={{
-										fontSize: "60px",
-										color: "#000",
-										fontWeight: 300,
-									}}
-								/>
-							) : (
-								<MaskText
-									Text={director.name.split(" ")}
-									customStyle={{
-										fontSize: "120px",
-										color: "#000",
-										fontWeight: 300,
-									}}
-								/>
-							)}
+							<div className=" w-full">
+								{isMobile ? (
+									<MaskText
+										Text={director.name.split(" ")}
+										customStyle={{
+											fontSize: "60px",
+											color: "#000",
+											fontWeight: 300,
+										}}
+									/>
+								) : (
+									<MaskText
+										Text={director.name.split(" ")}
+										customStyle={{
+											fontSize: "120px",
+											color: "#000",
+											fontWeight: 300,
+										}}
+									/>
+								)}
+							</div>
 
 							{/* <img src={director.image} alt={director.name} /> */}
 						</motion.div>

@@ -17,13 +17,19 @@ const projects = [
 		link: "/work/barista",
 	},
 	{
+		title: "Hansik dabang cafe",
+		src: "/hansik-dabang-cafe/02.jpeg",
+		color: "#000000",
+		link: "/work/hansik-dabang-cafe",
+	},
+	{
 		title: "Tescom Wireless India",
 		src: "/Tescom_wireless_india/01.jpg",
 		color: "#000000",
 		link: "/work/Tescom_wireless_india",
 	},
 	{
-		title: "The Belgian Wwaffle Cafe",
+		title: "The Belgian Waffle Cafe",
 		src: "/Tha_belgian_waffle_cafe/01.jpg",
 		color: "#000000",
 		link: "/work/The_belgian_waffle_cafe",
@@ -34,8 +40,13 @@ const projects = [
 		color: "#000000",
 		link: "/work/bellavita-store",
 	},
+	{
+		title: "Boba Tree Store",
+		src: "/Boba-tree-store/01.jpeg",
+		color: "#000000",
+		link: "/work/boba-tree-store",
+	},
 ];
-
 const scaleAnimation = {
 	initial: { scale: 0, x: "-50%", y: "-50%" },
 	enter: {
@@ -54,9 +65,7 @@ const scaleAnimation = {
 
 export default function Home() {
 	const [modal, setModal] = useState({ active: false, index: 0 });
-	// const isMobile = useMediaQuery({ query: "(max-width: 1200px)" });
-	const isMobile = true;
-
+	const isMobile = useMediaQuery({ query: "(max-width: 1200px)" });
 	const { active, index } = modal;
 	const modalContainer = useRef(null);
 	const cursor = useRef(null);
@@ -122,7 +131,7 @@ export default function Home() {
 			<div className={styles.body}>
 				{projects.map((project, index) => {
 					return (
-						<>
+						<div key={index}>
 							<Link href={project.link}>
 								<Project
 									index={index}
@@ -142,13 +151,11 @@ export default function Home() {
 									</div>
 								)}
 							</Link>
-						</>
+						</div>
 					);
 				})}
 			</div>
-			<Rounded>
-				<p>More work</p>
-			</Rounded>
+
 			<>
 				{isMobile ? (
 					<div></div>
@@ -160,7 +167,7 @@ export default function Home() {
 						animate={active ? "enter" : "closed"}
 						className={styles.modalContainer}
 					>
-						{/* <div
+						<div
 							style={{ top: index * -100 + "%" }}
 							className={styles.modalSlider}
 						>
@@ -173,18 +180,20 @@ export default function Home() {
 										key={`modal_${index}`}
 									>
 										<Image
-											src={`/assets${projects[index].src}`}
-											fill={true}
+											src={`/assets${src}`}
+											width={300}
+											height={0}
 											alt="image"
 											className="object-cover"
 										/>
 									</div>
 								);
 							})}
-						</div> */}
+						</div>
 					</motion.div>
 				)}
-				{/* <motion.div
+
+				<motion.div
 					ref={cursor}
 					className={styles.cursor}
 					variants={scaleAnimation}
@@ -199,7 +208,7 @@ export default function Home() {
 					animate={active ? "enter" : "closed"}
 				>
 					View
-				</motion.div> */}
+				</motion.div>
 			</>
 		</main>
 	);

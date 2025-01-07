@@ -13,7 +13,7 @@ export default function index({ index, title, manageModal }) {
 			}}
 			className={styles.project}
 		>
-			<h2>{title}</h2>
+			<h2 className="max-md:text-6xl max-md:py-4 mt-2">{title}</h2>
 		</div>
 	);
 }

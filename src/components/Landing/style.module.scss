@@ -24,10 +24,14 @@
 	.slider p {
 		position: relative;
 		margin: 0px;
-		color: white;
-		font-size: 230px;
+		color: #fff;
+		font-size: 200px;
 		font-weight: 500;
 		padding-right: 50px;
+		// text-shadow: 3px 0 #000000, -2px 0 #ffffff, 0 2px #000000, 0 -2px #000000,
+		// 3px 3px #000000, -1px -1px #ffffff, 1px -1px #000000, -1px 2px #000000;
+		
+
 
 		@media (max-width: 768px) {
 			font-size: 53px;
