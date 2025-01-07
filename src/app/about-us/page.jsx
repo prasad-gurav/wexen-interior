@@ -90,7 +90,7 @@ export default function AboutUs() {
 									<MaskText
 										Text={director.name.split(" ")}
 										customStyle={{
-											fontSize: "60px",
+											fontSize: "40px",
 											color: "#000",
 											fontWeight: 300,
 										}}
