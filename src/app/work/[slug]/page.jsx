@@ -27,7 +27,7 @@ const ourWorks = [
 	},
 	{
 		slug: "The_belgian_waffle_cafe",
-		name: "The Belgian Wwaffle Cafe",
+		name: "The Belgian Waffle Cafe",
 		img: [
 			"/assets/Tha_belgian_waffle_cafe/01.jpg",
 			"/assets/Tha_belgian_waffle_cafe/02.jpg",
