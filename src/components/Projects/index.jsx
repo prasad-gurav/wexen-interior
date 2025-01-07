@@ -7,12 +7,32 @@ import gsap from "gsap";
 import Image from "next/image";
 import Rounded from "../../common/RoundedButton";
 import { useMediaQuery } from "react-responsive";
+import Link from "next/link";
 
 const projects = [
 	{
 		title: "Barista store",
-		src: "/Barista_store/01.jpeg",
+		src: "/Barista_store/03.jpeg",
 		color: "#000000",
+		link: "/work/barista",
+	},
+	{
+		title: "Tescom Wireless India",
+		src: "/Tescom_wireless_india/01.jpg",
+		color: "#000000",
+		link: "/work/Tescom_wireless_india",
+	},
+	{
+		title: "The Belgian Wwaffle Cafe",
+		src: "/Tha_belgian_waffle_cafe/01.jpg",
+		color: "#000000",
+		link: "/work/The_belgian_waffle_cafe",
+	},
+	{
+		title: "Bellavita Store",
+		src: "/bellavita/01.jpeg",
+		color: "#000000",
+		link: "/work/bellavita-store",
 	},
 ];
 
@@ -34,7 +54,9 @@ const scaleAnimation = {
 
 export default function Home() {
 	const [modal, setModal] = useState({ active: false, index: 0 });
-	const isMobile = useMediaQuery({ query: "(max-width: 1200px)" });
+	// const isMobile = useMediaQuery({ query: "(max-width: 1200px)" });
+	const isMobile = true;
+
 	const { active, index } = modal;
 	const modalContainer = useRef(null);
 	const cursor = useRef(null);
@@ -101,27 +123,25 @@ export default function Home() {
 				{projects.map((project, index) => {
 					return (
 						<>
-							<Project
-								index={index}
-								title={project.title}
-								manageModal={manageModal}
-								key={index}
-							/>
-							{isMobile && (
-								<div
-									className="rounded-lg py-4"
-									// style={{ backgroundColor: project.color }}
-									key={`modal_${index}`}
-								>
-									<Image
-										src={`/assets${project.src}`}
-										height={600}
-										width={600}
-										alt="image"
-										className="object-cover w-96 h-auto rounded-lg"
-									/>
-								</div>
-							)}
+							<Link href={project.link}>
+								<Project
+									index={index}
+									title={project.title}
+									manageModal={manageModal}
+									key={index}
+								/>
+								{isMobile && (
+									<div className="rounded-lg py-4" key={`modal_${index}`}>
+										<Image
+											src={`/assets${project.src}`}
+											height={600}
+											width={600}
+											alt="image"
+											className="object-cover w-full  h-auto rounded-lg"
+										/>
+									</div>
+								)}
+							</Link>
 						</>
 					);
 				})}
@@ -140,7 +160,7 @@ export default function Home() {
 						animate={active ? "enter" : "closed"}
 						className={styles.modalContainer}
 					>
-						<div
+						{/* <div
 							style={{ top: index * -100 + "%" }}
 							className={styles.modalSlider}
 						>
@@ -153,7 +173,7 @@ export default function Home() {
 										key={`modal_${index}`}
 									>
 										<Image
-											src={`/assets${src}`}
+											src={`/assets${projects[index].src}`}
 											fill={true}
 											alt="image"
 											className="object-cover"
@@ -161,10 +181,10 @@ export default function Home() {
 									</div>
 								);
 							})}
-						</div>
+						</div> */}
 					</motion.div>
 				)}
-				<motion.div
+				{/* <motion.div
 					ref={cursor}
 					className={styles.cursor}
 					variants={scaleAnimation}
@@ -179,7 +199,7 @@ export default function Home() {
 					animate={active ? "enter" : "closed"}
 				>
 					View
-				</motion.div>
+				</motion.div> */}
 			</>
 		</main>
 	);

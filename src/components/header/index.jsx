@@ -17,7 +17,6 @@ export default function Home() {
 		if (isActive) setIsActive(false);
 	}, [pathname]);
 
-	// Monitor the scroll and toggle scale based on position
 	const [scaleState, setScaleState] = useState("closed");
 
 	useEffect(() => {

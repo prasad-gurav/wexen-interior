@@ -14,8 +14,6 @@ export default function index({ index, title, manageModal }) {
 			className={styles.project}
 		>
 			<h2>{title}</h2>
-
-			<p>Design & Development</p>
 		</div>
 	);
 }
