@@ -48,7 +48,7 @@ function OurWork() {
 			src: "/assets/Tha_belgian_waffle_cafe/01.jpg",
 			alt: "Belgian Waffle Cafe",
 			description: "Delight in the finest Belgian waffles and warm ambiance.",
-			slug: "hansik-dabang-cafe",
+			slug: "The_belgian_waffle_cafe",
 		},
 		{
 			src: "/assets/bellavita/01.jpeg",
