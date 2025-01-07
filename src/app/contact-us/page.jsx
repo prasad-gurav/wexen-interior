@@ -5,7 +5,7 @@ function Page() {
 	return (
 		<div className="h-auto py-32 px-8 flex flex-col items-center justify-center container mx-auto">
 			<div className={`${styles.contact} w-full max-w-4xl`}>
-				<h3 className="font-poppins text-4xl md:text-6xl font-light text-center mb-8">
+				<h3 className="font-poppins text-4xl md:text-6xl font-light text-center mb-8 max-md:leading-[4rem]">
 					Contact Information
 				</h3>
 				<div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-8">

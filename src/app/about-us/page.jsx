@@ -87,14 +87,9 @@ export default function AboutUs() {
 
 							<div className=" w-full">
 								{isMobile ? (
-									<MaskText
-										Text={director.name.split(" ")}
-										customStyle={{
-											fontSize: "40px",
-											color: "#000",
-											fontWeight: 300,
-										}}
-									/>
+									<p className="font-poppins font-light text-[40px]">
+										{director.name}
+									</p>
 								) : (
 									<MaskText
 										Text={director.name.split(" ")}
