@@ -6,12 +6,13 @@ import { useMediaQuery } from "react-responsive";
 
 const directors = [
 	{
-		name: "Mr.Mohd Mohsin",
-		image: "/assets/ourTeam/MohdMosin.jpeg", // Replace with actual image paths
-	},
-	{
 		name: "Mr.Shubham Kathoke",
 		image: "/assets/ourTeam/ShubhamKathoke.jpeg", // Replace with actual image paths
+	},
+
+	{
+		name: "Mr.Mohd Mohsin",
+		image: "/assets/ourTeam/MohdMosin.jpeg", // Replace with actual image paths
 	},
 
 	{

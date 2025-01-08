@@ -44,7 +44,7 @@ const NavBar = () => {
 						isHomePage ? "text-white" : "text-black"
 					} font-bold`}
 				>
-					WEXEN
+					WEXEN INTERIOR
 				</Link>
 
 				<div>
