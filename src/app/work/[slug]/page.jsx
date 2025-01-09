@@ -43,6 +43,8 @@ const ourWorks = [
 		img: [
 			"/assets/hansik-dabang-cafe/01.jpeg",
 			"/assets/hansik-dabang-cafe/13.mp4",
+			"/assets/hansik-dabang-cafe/17.jpeg",
+			"/assets/hansik-dabang-cafe/16.jpeg",
 			"/assets/hansik-dabang-cafe/02.jpeg",
 			"/assets/hansik-dabang-cafe/03.jpeg",
 			"/assets/hansik-dabang-cafe/04.jpeg",
