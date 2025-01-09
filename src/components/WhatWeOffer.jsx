@@ -56,17 +56,17 @@ const WhatWeOffer = () => {
 						{
 							title: "Interior Design",
 							description:
-								"Sony laptops are among the most well-known laptops on today’s market. Sony is a name that over time has established itself as creating a solid product.",
+								"We create personalized interior designs that balance aesthetics, functionality, and comfort to bring your dream spaces to life.",
 						},
 						{
 							title: "Architecture Design",
 							description:
-								"Computer users and programmers have become so accustomed to using Windows, even for the changing capabilities and the appearances of the graphical.",
+								"Our architectural designs focus on innovative solutions that blend form, function, and sustainability for timeless structures.",
 						},
 						{
 							title: "Concept Design",
 							description:
-								"Can you imagine what we will be downloading in another twenty years? I mean who would have ever thought that you could record sound.",
+								"From initial ideas to refined concepts, we transform visions into inspiring designs that define the essence of your space.",
 						},
 					].map((card, index) => (
 						<motion.div

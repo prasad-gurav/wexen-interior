@@ -10,43 +10,44 @@ import { BiSolidUserDetail } from "react-icons/bi";
 import { motion } from "framer-motion";
 
 const features = [
-  {
-    title: "Expert Technicians",
-    description:
-      "Computer users and programmers have become so accustomed to using Windows, even for the changing.",
-    icon: <FaUserTie size={40} />,
-  },
-  {
-    title: "Professional Service",
-    description:
-      "Computer users and programmers have become so accustomed to using Windows, even for the changing.",
-    icon: <ImProfile size={40} />,
-  },
-  {
-    title: "Great Support",
-    description:
-      "Computer users and programmers have become so accustomed to using Windows, even for the changing.",
-    icon: <MdSupportAgent size={40} />,
-  },
-  {
-    title: "Innovative Designs",
-    description:
-      "We combine aesthetics with functionality to deliver unique, cutting-edge designs that bring your vision to life.",
-    icon: <IoLogoDesignernews size={40} />,
-  },
-  {
-    title: "Attention to Detail",
-    description:
-      "Our meticulous attention to detail ensures flawless execution and a space that feels complete and cohesive.",
-    icon: <BiSolidUserDetail size={40} />,
-  },
-  {
-    title: "Space Optimization",
-    description:
-      "We maximize the potential of every space, ensuring functionality and beauty in even the smallest areas.",
-    icon: <RxSpaceBetweenVertically size={40} />,
-  },
+	{
+		title: "Expert Technicians",
+		description:
+			"Our team of skilled interior specialists ensures precision and excellence in every project.",
+		icon: <FaUserTie size={40} />,
+	},
+	{
+		title: "Professional Service",
+		description:
+			"We provide seamless and professional interior design services tailored to your unique needs.",
+		icon: <ImProfile size={40} />,
+	},
+	{
+		title: "Great Support",
+		description:
+			"Our dedicated team offers exceptional support throughout your interior design journey.",
+		icon: <MdSupportAgent size={40} />,
+	},
+	{
+		title: "Innovative Designs",
+		description:
+			"We combine aesthetics with functionality to deliver unique, cutting-edge designs that bring your vision to life.",
+		icon: <IoLogoDesignernews size={40} />,
+	},
+	{
+		title: "Attention to Detail",
+		description:
+			"Our meticulous attention to detail ensures flawless execution and a space that feels complete and cohesive.",
+		icon: <BiSolidUserDetail size={40} />,
+	},
+	{
+		title: "Space Optimization",
+		description:
+			"We maximize the potential of every space, ensuring functionality and beauty in even the smallest areas.",
+		icon: <RxSpaceBetweenVertically size={40} />,
+	},
 ];
+
 
 function Features() {
   const containerVariants = {
