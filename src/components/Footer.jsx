@@ -1,6 +1,7 @@
 "use client"
 import React from "react";
 import { motion } from "framer-motion";
+import { FaInstagram } from "react-icons/fa";
 
 function SimpleFooter() {
 	return (
@@ -65,21 +66,15 @@ function SimpleFooter() {
 						and design updates.
 					</p>
 					<div className="flex space-x-4">
-						{[
-							{ platform: "facebook", url: "https://facebook.com" },
-							{ platform: "twitter", url: "https://twitter.com" },
-							{ platform: "instagram", url: "https://instagram.com" },
-							{ platform: "pinterest", url: "https://pinterest.com" },
-						].map((icon, idx) => (
-							<motion.a
-								key={idx}
-								href={icon.url}
-								className="text-gray-400 hover:text-yellow-500 text-2xl"
-								whileHover={{ scale: 1.2 }}
-							>
-								<i className={`fab fa-${icon.platform}`}></i>
-							</motion.a>
-						))}
+						<motion.a
+							target="__blank"
+							href={"https://www.instagram.com/wexeninterior/"}
+							className="text-gray-400 hover:text-pink-500 text-2xl px-4"
+							whileHover={{ scale: 1.2 }}
+						>
+							<FaInstagram size={48} />
+							wexeninterior
+						</motion.a>
 					</div>
 				</motion.div>
 			</div>

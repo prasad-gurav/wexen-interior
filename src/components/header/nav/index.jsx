@@ -6,6 +6,7 @@ import { menuSlide } from "../anim";
 import Link from "./Link";
 import Curve from "./Curve";
 import Footer from "./Footer";
+import { FaInstagram } from "react-icons/fa";
 
 const navItems = [
 	{
@@ -70,6 +71,15 @@ export default function index() {
 					})}
 				</div>
 				{/* <Footer /> */}
+				<motion.a
+					target="__blank"
+					href={"https://www.instagram.com/wexeninterior/"}
+					className="text-gray-400 hover:text-pink-500 text-2xl px-4"
+					whileHover={{ scale: 1.2 }}
+				>
+					<FaInstagram size={48} />
+					wexeninterior
+				</motion.a>
 			</div>
 			<Curve />
 		</motion.div>
