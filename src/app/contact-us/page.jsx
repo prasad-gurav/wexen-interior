@@ -48,6 +48,9 @@ function Page() {
 						</a>
 					</p>
 					<p className="mb-2">
+						<strong>Office :</strong> +91 9008723947
+					</p>
+					<p className="mb-2">
 						<strong>Mobile:</strong> +91 9373811418 / +91 9027614898 / +91
 						8423952728
 					</p>
