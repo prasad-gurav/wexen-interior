@@ -75,6 +75,12 @@ function OurWork() {
 			src: "/assets/Boba-tree-store/01.jpeg",
 			slug: "boba-tree-store",
 		},
+		{
+			alt: 'Sun Bright Residency',
+			src: '/assets/sun_bright_residency/25.jpeg',
+			slug: 'sun-bright-residency',
+		}
+
 	];
 
 	return (

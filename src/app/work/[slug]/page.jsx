@@ -76,6 +76,42 @@ const ourWorks = [
 			"/assets/bellavita/03.jpeg",
 		],
 	},
+	{
+		slug: "sun-bright-residency",
+		name: "Sun Bright Residency",
+		img: [
+			"/assets/sun_bright_residency/01.jpeg",
+			"/assets/sun_bright_residency/02.jpeg",
+			"/assets/sun_bright_residency/03.jpeg",
+			"/assets/sun_bright_residency/04.jpeg",
+			"/assets/sun_bright_residency/05.jpeg",
+			"/assets/sun_bright_residency/06.jpeg",
+			"/assets/sun_bright_residency/07.jpeg",
+			"/assets/sun_bright_residency/08.jpeg",
+			"/assets/sun_bright_residency/09.jpeg",
+			"/assets/sun_bright_residency/10.jpeg",
+			"/assets/sun_bright_residency/11.jpeg",
+			"/assets/sun_bright_residency/12.jpeg",
+			"/assets/sun_bright_residency/13.jpeg",
+			"/assets/sun_bright_residency/14.jpeg",
+			"/assets/sun_bright_residency/15.jpeg",
+			"/assets/sun_bright_residency/16.jpeg",
+			"/assets/sun_bright_residency/17.jpeg",
+			"/assets/sun_bright_residency/18.jpeg",
+			"/assets/sun_bright_residency/19.jpeg",
+			"/assets/sun_bright_residency/20.jpeg",
+			"/assets/sun_bright_residency/21.jpeg",
+			"/assets/sun_bright_residency/22.jpeg",
+			"/assets/sun_bright_residency/23.jpeg",
+			"/assets/sun_bright_residency/24.jpeg",
+			"/assets/sun_bright_residency/25.jpeg",
+			"/assets/sun_bright_residency/26.jpeg",
+			"/assets/sun_bright_residency/27.jpeg",
+			// Videos
+			"/assets/sun_bright_residency/01.mp4",
+
+		],
+	}
 ];
 
 async function Page({ params }) {
