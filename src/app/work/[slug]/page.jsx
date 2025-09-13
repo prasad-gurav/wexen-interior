@@ -137,7 +137,32 @@ const ourWorks = [
 
 		]
 
+	},
+	{
+		slug: "sun-n-shade",
+		name: "Sun n Shade",
+		img: [
+			"/assets/sun-and-shade/01.jpeg",
+			"/assets/sun-and-shade/02.jpeg",
+			"/assets/sun-and-shade/03.jpeg",
+			"/assets/sun-and-shade/04.jpeg",
+			"/assets/sun-and-shade/05.jpeg",
+			"/assets/sun-and-shade/06.jpeg",
+			"/assets/sun-and-shade/07.jpeg",
+			"/assets/sun-and-shade/08.jpeg",
+			"/assets/sun-and-shade/09.jpeg",
+			"/assets/sun-and-shade/10.jpeg",
+			"/assets/sun-and-shade/11.jpeg",
+			"/assets/sun-and-shade/12.jpeg",
+			"/assets/sun-and-shade/13.jpeg",
+			"/assets/sun-and-shade/14.jpeg",
+			"/assets/sun-and-shade/15.jpeg",
+			"/assets/sun-and-shade/01.mp4",
+
+
+		]
 	}
+
 ];
 
 async function Page({ params }) {

@@ -58,6 +58,12 @@ const projects = [
 		color: "#000000",
 		link: "/work/mod",
 	},
+	{
+		title: "Sun n Shade",
+		src: "/sun-and-shade/15.jpeg",
+		color: "#000000",
+		link: "/work/sun-n-shade",
+	}
 
 ];
 const scaleAnimation = {

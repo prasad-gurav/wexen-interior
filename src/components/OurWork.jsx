@@ -85,6 +85,11 @@ function OurWork() {
 			src: "/assets/mod/13.jpeg",
 			slug: "mod",
 		},
+		{
+			alt: "Sun n Shade",
+			src: "/assets/sun-and-shade/15.jpeg",
+			slug: "sun-n-shade",
+		}
 
 	];
 
