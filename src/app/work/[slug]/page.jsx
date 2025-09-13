@@ -161,6 +161,47 @@ const ourWorks = [
 
 
 		]
+	},
+	{
+		slug: "pratham-udupi-food-court",
+		name: "Pratham Udupi food court",
+		img: [
+			"/assets/pratham-foods/01.jpeg",
+			"/assets/pratham-foods/02.jpeg",
+			"/assets/pratham-foods/03.jpeg",
+			"/assets/pratham-foods/04.jpeg",
+			"/assets/pratham-foods/05.jpeg",
+			"/assets/pratham-foods/06.jpeg",
+			"/assets/pratham-foods/07.jpeg",
+			"/assets/pratham-foods/08.jpeg",
+			"/assets/pratham-foods/09.jpeg",
+			"/assets/pratham-foods/10.jpeg",
+			"/assets/pratham-foods/11.jpeg",
+			"/assets/pratham-foods/12.jpeg",
+			"/assets/pratham-foods/13.jpeg",
+			"/assets/pratham-foods/14.jpeg",
+			"/assets/pratham-foods/15.jpeg",
+			"/assets/pratham-foods/16.jpeg",
+			"/assets/pratham-foods/17.jpeg",
+			"/assets/pratham-foods/18.jpeg",
+			"/assets/pratham-foods/19.jpeg",
+			"/assets/pratham-foods/20.jpeg",
+			"/assets/pratham-foods/21.jpeg",
+			"/assets/pratham-foods/22.jpeg",
+			"/assets/pratham-foods/23.jpeg",
+			"/assets/pratham-foods/24.jpeg",
+			"/assets/pratham-foods/25.jpeg",
+			"/assets/pratham-foods/26.jpeg",
+			"/assets/pratham-foods/27.jpeg",
+			"/assets/pratham-foods/28.jpeg",
+			"/assets/pratham-foods/29.jpeg",
+			"/assets/pratham-foods/30.jpeg",
+			"/assets/pratham-foods/31.jpeg",
+			"/assets/pratham-foods/32.jpeg",
+		],
+
+
+
 	}
 
 ];

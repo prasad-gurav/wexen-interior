@@ -63,6 +63,11 @@ const projects = [
 		src: "/sun-and-shade/15.jpeg",
 		color: "#000000",
 		link: "/work/sun-n-shade",
+	}, {
+		title: "Pratham Udupi Food Court",
+		src: "/pratham-foods/30.jpeg",
+		color: "#000000",
+		link: "/work/pratham-udupi-food-court",
 	}
 
 ];

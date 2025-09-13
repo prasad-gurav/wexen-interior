@@ -89,6 +89,11 @@ function OurWork() {
 			alt: "Sun n Shade",
 			src: "/assets/sun-and-shade/15.jpeg",
 			slug: "sun-n-shade",
+		},
+		{
+			alt: "Pratham Udupi Food Court",
+			src: "/assets/pratham-foods/30.jpeg",
+			slug: "pratham-udupi-food-court"
 		}
 
 	];
