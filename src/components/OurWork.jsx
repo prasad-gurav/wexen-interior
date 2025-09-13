@@ -79,7 +79,12 @@ function OurWork() {
 			alt: 'Sun Bright Residency',
 			src: '/assets/sun_bright_residency/25.jpeg',
 			slug: 'sun-bright-residency',
-		}
+		},
+		{
+			alt: "Mod Store",
+			src: "/assets/mod/13.jpeg",
+			slug: "mod",
+		},
 
 	];
 

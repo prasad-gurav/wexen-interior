@@ -46,6 +46,19 @@ const projects = [
 		color: "#000000",
 		link: "/work/boba-tree-store",
 	},
+	{
+		title: "Sun Bright Residency",
+		src: "/sun_bright_residency/25.jpeg",
+		color: "#000000",
+		link: "/work/sun-bright-residency",
+	},
+	{
+		title: "Mod Store",
+		src: "/mod/13.jpeg",
+		color: "#000000",
+		link: "/work/mod",
+	},
+
 ];
 const scaleAnimation = {
 	initial: { scale: 0, x: "-50%", y: "-50%" },

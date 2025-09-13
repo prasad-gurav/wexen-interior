@@ -109,8 +109,34 @@ const ourWorks = [
 			"/assets/sun_bright_residency/27.jpeg",
 			// Videos
 			"/assets/sun_bright_residency/01.mp4",
+			"/assets/sun_bright_residency/02.mp4",
 
 		],
+	},
+	{
+		slug: "mod",
+		name: "Mod Store",
+		img: [
+			"/assets/mod/01.jpeg",
+			"/assets/mod/02.jpeg",
+			"/assets/mod/03.jpeg",
+			"/assets/mod/04.jpeg",
+			"/assets/mod/05.jpeg",
+			"/assets/mod/06.jpeg",
+			"/assets/mod/07.jpeg",
+			"/assets/mod/08.jpeg",
+			"/assets/mod/09.jpeg",
+			"/assets/mod/10.jpeg",
+			"/assets/mod/11.jpeg",
+			"/assets/mod/12.jpeg",
+			"/assets/mod/13.jpeg",
+			"/assets/mod/14.jpeg",
+			"/assets/mod/15.jpeg",
+
+			"/assets/mod/01.mp4",
+
+		]
+
 	}
 ];
 
